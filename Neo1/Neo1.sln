@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29721.120
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neo1", "Neo1.csproj", "{3E3033F6-E493-469B-9C4B-BC502337989D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuLib", "..\MenuLib\MenuLib.csproj", "{7ACB2E29-B11A-4B16-A52A-616AF7B3FDD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E3033F6-E493-469B-9C4B-BC502337989D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E3033F6-E493-469B-9C4B-BC502337989D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E3033F6-E493-469B-9C4B-BC502337989D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E3033F6-E493-469B-9C4B-BC502337989D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ACB2E29-B11A-4B16-A52A-616AF7B3FDD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ACB2E29-B11A-4B16-A52A-616AF7B3FDD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ACB2E29-B11A-4B16-A52A-616AF7B3FDD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ACB2E29-B11A-4B16-A52A-616AF7B3FDD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79251B84-FCEC-489C-A598-359CBBEE458D}
+	EndGlobalSection
+EndGlobal
