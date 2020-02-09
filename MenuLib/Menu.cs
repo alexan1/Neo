@@ -4,9 +4,9 @@ using System.Text;
 
 namespace MenuLib
 {
-    public class Menu
+    public static class Menu
     {
-        public Menu()
+        static Menu()
         {
             ActionMenu = new Dictionary<int, string>
             {
@@ -30,10 +30,10 @@ namespace MenuLib
                 new Product(6, "Crème brûlée", 6, 2),
             };
         }
-        public ICollection<Product> ProductMenu { get; set; }
-        public IDictionary<int, string> ActionMenu { get; set; }
+        public static ICollection<Product> ProductMenu { get; set; }
+        public static IDictionary<int, string> ActionMenu { get; set; }
 
-        public void Afficher()
+        public static void Afficher()
         {
             foreach (var item in ProductMenu)
             {
@@ -46,36 +46,38 @@ namespace MenuLib
                 Console.WriteLine(item.MaxQuantity);
             }
         }
-        public void Ajouter()
+        public static void Ajouter()
         {
 
         }
-        public void Supprimer()
+        public static void Supprimer()
         {
 
         }
-        public void Payer()
+        public static void Payer()
         {
 
         }
-        public void Solde()
+        public static void Solde()
         {
 
         }        
-        public void Facture()
+        public static void Facture()
         {
 
         }
-        public void Aide()
+        public static void Aide()
         {
             foreach (var item in ActionMenu)
             {
                 Console.Write(item.Key);
                 Console.Write(". ");
-                Console.WriteLine(item.Value);
+                Console.WriteLine(item.Value);                
             }
-
-            var key = Console.ReadLine();
+            Console.WriteLine(" ");
+            var basket = new Basket();
+            
+            var key = Console.ReadKey().KeyChar.ToString();
 
             if (Int32.TryParse(key, out int j))
             {
@@ -85,7 +87,8 @@ namespace MenuLib
                         Afficher();
                         break;
                     case 2:
-                        Ajouter();
+                        basket.AddItem();
+                        //Ajouter();
                         break;
                     case 3:
                         Supprimer();
@@ -112,7 +115,7 @@ namespace MenuLib
             }
 
         }
-        public void Quitter()
+        public static void Quitter()
         {
             Environment.Exit(0);
         }

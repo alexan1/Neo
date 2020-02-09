@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neo1", "Neo1\Neo1.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MenuLib", "MenuLib\MenuLib.csproj", "{A11C1023-C211-44E1-B55A-95537FC28866}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuTest", "MenuTest\MenuTest.csproj", "{B0A7B611-2506-428F-B132-53A55BF5D2CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A11C1023-C211-44E1-B55A-95537FC28866}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A11C1023-C211-44E1-B55A-95537FC28866}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A11C1023-C211-44E1-B55A-95537FC28866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0A7B611-2506-428F-B132-53A55BF5D2CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0A7B611-2506-428F-B132-53A55BF5D2CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0A7B611-2506-428F-B132-53A55BF5D2CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0A7B611-2506-428F-B132-53A55BF5D2CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
