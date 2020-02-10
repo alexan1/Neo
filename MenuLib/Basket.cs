@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace MenuLib
 {
@@ -9,26 +8,18 @@ namespace MenuLib
     {
         //private Product prodict;
 
-        public ICollection<CartItem> Items { get; set; }
+        public ICollection<CartItem> Items { get; set; } = new List<CartItem>();
 
-        public void AddItem()
-        {
-            Console.Write("veuillez entrer le numéro de produit");
-            var id = Console.ReadKey().KeyChar.ToString();
-            Console.WriteLine(" ");
-            if (Int32.TryParse(id, out int j))
-            {
-                if (Items != null)
-                {
-                    var item = Items.FirstOrDefault(p => p.ItemProduct.Id == j);
-                    if (item != null)
-                        item.Quantity++;
-                    else
-                        Items.Add(item);
-                }
-                else
-                    Items.Add(item);
-            }
+        public void AddItem(int j)
+        {                
+            var product = Menu.ProductMenu.FirstOrDefault(p => p.Id == j);
+            var item = Items.FirstOrDefault(i => i.ItemProduct == product);
+            if (item != null)
+                item.Quantity++;
+            else
+            {                        
+                Items.Add(item);
+            }                       
         }
 
         public void RemoveItem(Product product)

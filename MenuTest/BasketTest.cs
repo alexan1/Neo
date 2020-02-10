@@ -1,4 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
+
 
 namespace MenuTest
 {
@@ -8,6 +10,9 @@ namespace MenuTest
         [TestMethod]
         public void AddItem()
         {
+            //var product = MenuLib.Menu.ProductMenu.FirstOrDefault(p => p.Id ==1);
+            var cart = new MenuLib.Basket();
+            cart.AddItem(1);
 
         }
     }

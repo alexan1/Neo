@@ -87,8 +87,12 @@ namespace MenuLib
                         Afficher();
                         break;
                     case 2:
-                        basket.AddItem();
-                        //Ajouter();
+                        Console.Write("veuillez entrer le numéro de produit");
+                        var id = Console.ReadKey().KeyChar.ToString();
+                        Console.WriteLine(" ");
+                        if (Int32.TryParse(id, out int n))
+                            basket.AddItem(n);
+                        
                         break;
                     case 3:
                         Supprimer();
