@@ -9,11 +9,28 @@ namespace MenuTest
     {
         [TestMethod]
         public void AddItem()
-        {
-            //var product = MenuLib.Menu.ProductMenu.FirstOrDefault(p => p.Id ==1);
+        {            
             var cart = new MenuLib.Basket();
             cart.AddItem(1);
+            Assert.AreEqual(1, cart.Items.Count);
 
+            var item = cart.Items.FirstOrDefault(x => x.ItemProduct.Id == 1);
+
+            Assert.AreEqual(5, item.ItemProduct.Price);
+            Assert.AreEqual(5, item.ItemProduct.MaxQuantity);
+        }
+
+        [TestMethod]
+        public void RemoveItem()
+        {
+            var cart = new MenuLib.Basket();
+            cart.AddItem(1);
+            Assert.AreEqual(1, cart.Items.Count);
+
+            var item = cart.Items.FirstOrDefault(x => x.ItemProduct.Id == 1);
+
+            cart.RemoveItem(item.ItemProduct);
+            Assert.AreEqual(0, cart.Items.Count);
         }
     }
 }

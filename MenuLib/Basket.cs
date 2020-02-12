@@ -17,8 +17,9 @@ namespace MenuLib
             if (item != null)
                 item.Quantity++;
             else
-            {                        
-                Items.Add(item);
+            {
+                var item1 = new CartItem(product, 1);
+                Items.Add(item1);
             }                       
         }
 
@@ -26,7 +27,9 @@ namespace MenuLib
         {
             var item = Items.FirstOrDefault(p => p.ItemProduct == product);
             if (item != null)
-                item.Quantity--;            
+                item.Quantity--;
+            if (item.Quantity == 0)
+                Items.Remove(item);
         }
     }
 }
