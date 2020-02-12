@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace MenuLib
 {
@@ -45,11 +45,7 @@ namespace MenuLib
                 Console.Write(" ");
                 Console.WriteLine(item.MaxQuantity);
             }
-        }
-        public static void Ajouter()
-        {
-
-        }
+        }        
         public static void Supprimer()
         {
 
@@ -67,7 +63,7 @@ namespace MenuLib
 
         }
         public static void Aide()
-        {
+        {            
             foreach (var item in ActionMenu)
             {
                 Console.Write(item.Key);
@@ -95,7 +91,13 @@ namespace MenuLib
                         
                         break;
                     case 3:
-                        Supprimer();
+                        Console.Write("veuillez entrer le numéro de produit");
+                        var id2 = Console.ReadKey().KeyChar.ToString();
+                        Console.WriteLine(" ");
+                        //if (Int32.TryParse(id2, out int n2))
+                        //var cart = basket.Items.
+                        //var item = cart.Items.FirstOrDefault(x => x.ItemProduct.Id == n2);
+                        //basket.RemoveItem(n2);
                         break;
                     case 4:
                         Payer();
@@ -103,8 +105,7 @@ namespace MenuLib
                     case 5:
                         Solde();
                         break;
-                    case 6:
-                        Ajouter();
+                    case 6:                        
                         break;
                     case 7:
                         Aide();
